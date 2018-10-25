@@ -1,0 +1,37 @@
+package com.chonghuitang.mall.entity;
+
+/**
+ * @author lxl
+ * @Description 统一管理返回值
+ */
+public enum ResultEnum {
+
+    SUCCESS(0,"SUCCESS"),
+    NOT_FOUND(-1,"notFound[数据不存在或者数据为空]"),
+    ERROR(-1,"error"),
+    PARAMETER_ERROR(-1,"parameter error [参数异常:参数为空或者参数类型不符]")
+    ;
+
+    private Integer code;
+    private String msg;
+    ResultEnum(Integer code,String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
+    public Integer getCode() {
+        return code;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+}
